@@ -1,6 +1,4 @@
-Absolutely. Here is the **complete copy-paste-ready `README.md`** for the root of your repository.
 
-```markdown
 # Employee Support Policy Assistant
 
 A two-service employee policy assistant built with **Spring Boot** and **Python**.
@@ -1147,6 +1145,3 @@ marlabs-assessment/
 └── docs/
     ├── decision-note.md
     └── production-design.md
-```
-
-After this, **the next thing is the test suite**—we should run what you currently have, see the failures, and then make the tests match the assessment rather than adding random tests.
