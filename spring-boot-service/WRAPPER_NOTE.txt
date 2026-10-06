@@ -1,0 +1,3 @@
+This project is intentionally kept compatible with the Spring Initializr Maven wrapper.
+Copy mvnw, mvnw.cmd and .mvn/wrapper from your already-generated Spring Initializr project
+into this directory if they are not present. The root README gives the command.

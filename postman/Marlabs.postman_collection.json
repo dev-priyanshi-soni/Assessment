@@ -1,0 +1,581 @@
+{
+  "info": {
+    "_postman_id": "19827b93-20bd-4753-991b-5083511096ac",
+    "name": "Marlabs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58128131",
+    "_collection_link": "https://go.postman.co/collection/58128131-19827b93-20bd-4753-991b-5083511096ac?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Spring boot - Answer API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "X-Caller-Id",
+            "value": "atlas-employee-01",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"question\": \"What is the annual certification reimbursement limit?\",\r\n  \"as_of\": \"2026-09-21\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/answer",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "answer"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Caller-Id",
+                "value": "atlas-employee-01",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"question\": \"What is the annual certification reimbursement limit?\",\r\n  \"as_of\": \"2026-09-21\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/answer",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "answer"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain;charset=UTF-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "279"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 06 Oct 2026 10:56:39 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"status\":\"ANSWERED\",\"answer\":\"Supported by the eligible policy evidence: The annual certification reimbursement limit for employees is INR 25000.\",\"citations\":[{\"chunk_id\":\"atlas-cert-current\",\"quote\":\"The annual certification reimbursement limit for employees is INR 25000.\"}]}"
+        }
+      ]
+    },
+    {
+      "name": "Python - Answer API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-Caller-Id",
+            "value": "atlas-employee-01"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"question\":\"What is the annual certification reimbursement limit?\",\"as_of\":\"2026-09-21\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/internal/answer",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "internal",
+            "answer"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Caller-Id",
+                "value": "atlas-employee-01"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"question\":\"What is the annual certification reimbursement limit?\",\"as_of\":\"2026-09-21\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/internal/answer",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "internal",
+                "answer"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "date",
+              "value": "Mon, 05 Oct 2026 18:30:57 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "279"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"ANSWERED\",\n    \"answer\": \"Supported by the eligible policy evidence: The annual certification reimbursement limit for employees is INR 25000.\",\n    \"citations\": [\n        {\n            \"chunk_id\": \"atlas-cert-current\",\n            \"quote\": \"The annual certification reimbursement limit for employees is INR 25000.\"\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Python - Batch API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Caller-Id",
+            "value": "atlas-employee-01"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "type": "text",
+              "contentType": "application/json",
+              "key": "metadata",
+              "value": "{\"batch_id\":\"batch-001\",\"as_of\":\"2026-09-21\",\"documents\":[{\"document_id\":\"request-01\",\"filename\":\"request-01.txt\"},{\"document_id\":\"request-02\",\"filename\":\"request-02.pdf\"},{\"document_id\":\"request-03\",\"filename\":\"request-03.txt\"},{\"document_id\":\"request-04\",\"filename\":\"request-04.txt\"},{\"document_id\":\"request-05\",\"filename\":\"request-05.txt\"},{\"document_id\":\"request-06\",\"filename\":\"request-06.txt\"},{\"document_id\":\"request-07\",\"filename\":\"request-07.txt\"},{\"document_id\":\"request-08\",\"filename\":\"request-08.txt\"}]}"
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "src": [
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-01.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-02.pdf",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-03.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-04.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-05.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-06.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-07.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-08.txt"
+              ]
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "value": null,
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "value": null,
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "value": null,
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "value": null,
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "value": null,
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "value": null,
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "value": null,
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/internal/batches",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "internal",
+            "batches"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success resp",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Caller-Id",
+                "value": "atlas-employee-01"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "contentType": "application/json",
+                  "key": "metadata",
+                  "value": "{\"batch_id\":\"batch-001\",\"as_of\":\"2026-09-21\",\"documents\":[{\"document_id\":\"request-01\",\"filename\":\"request-01.txt\"},{\"document_id\":\"request-02\",\"filename\":\"request-02.pdf\"},{\"document_id\":\"request-03\",\"filename\":\"request-03.txt\"},{\"document_id\":\"request-04\",\"filename\":\"request-04.txt\"},{\"document_id\":\"request-05\",\"filename\":\"request-05.txt\"},{\"document_id\":\"request-06\",\"filename\":\"request-06.txt\"},{\"document_id\":\"request-07\",\"filename\":\"request-07.txt\"},{\"document_id\":\"request-08\",\"filename\":\"request-08.txt\"}]}"
+                },
+                {
+                  "type": "file",
+                  "key": "files",
+                  "src": [
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-01.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-02.pdf",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-03.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-04.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-05.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-06.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-07.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-08.txt"
+                  ]
+                },
+                {
+                  "type": "file",
+                  "key": "files",
+                  "value": null,
+                  "disabled": true
+                },
+                {
+                  "type": "file",
+                  "key": "files",
+                  "value": null,
+                  "disabled": true
+                },
+                {
+                  "type": "file",
+                  "key": "files",
+                  "value": null,
+                  "disabled": true
+                },
+                {
+                  "type": "file",
+                  "key": "files",
+                  "value": null,
+                  "disabled": true
+                },
+                {
+                  "type": "file",
+                  "key": "files",
+                  "value": null,
+                  "disabled": true
+                },
+                {
+                  "type": "file",
+                  "key": "files",
+                  "value": null,
+                  "disabled": true
+                },
+                {
+                  "type": "file",
+                  "key": "files",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/internal/batches",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "internal",
+                "batches"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "date",
+              "value": "Mon, 05 Oct 2026 18:42:10 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "3512"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"batch_id\": \"batch-001\",\n    \"summary\": {\n        \"total\": 8,\n        \"completed\": 7,\n        \"failed\": 1\n    },\n    \"results\": [\n        {\n            \"document_id\": \"request-01\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"certification reimbursement\",\n                \"amount\": 18000,\n                \"currency\": \"INR\",\n                \"reference\": \"CERT-101\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"ANSWERED\",\n                \"answer\": \"Supported by the eligible policy evidence: The annual certification reimbursement limit for employees is INR 25000.\",\n                \"citations\": [\n                    {\n                        \"chunk_id\": \"atlas-cert-current\",\n                        \"quote\": \"The annual certification reimbursement limit for employees is INR 25000.\"\n                    }\n                ]\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"HUMAN_REVIEW_REQUIRED\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-02\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"home-office allowance\",\n                \"amount\": 14000,\n                \"currency\": \"INR\",\n                \"reference\": \"HOME-202\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"CONFLICT\",\n                \"answer\": null,\n                \"citations\": [\n                    {\n                        \"chunk_id\": \"atlas-home-office-b\",\n                        \"quote\": \"The annual home-office allowance for employees is INR 15000.\"\n                    },\n                    {\n                        \"chunk_id\": \"atlas-home-office-a\",\n                        \"quote\": \"The annual home-office allowance for employees is INR 12000.\"\n                    }\n                ]\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"POLICY_CONFLICT\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-03\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"certification reimbursement\",\n                \"amount\": null,\n                \"currency\": \"INR\",\n                \"reference\": \"CERT-303\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"ANSWERED\",\n                \"answer\": \"Supported by the eligible policy evidence: The annual certification reimbursement limit for employees is INR 25000.\",\n                \"citations\": [\n                    {\n                        \"chunk_id\": \"atlas-cert-current\",\n                        \"quote\": \"The annual certification reimbursement limit for employees is INR 25000.\"\n                    }\n                ]\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"AMOUNT_MISSING_OR_AMBIGUOUS\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-04\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"wellness benefit\",\n                \"amount\": 6000,\n                \"currency\": \"INR\",\n                \"reference\": \"WELL-404\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"INSUFFICIENT_EVIDENCE\",\n                \"answer\": null,\n                \"citations\": []\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"HUMAN_REVIEW_REQUIRED\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-05\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"certification reimbursement\",\n                \"amount\": 70000,\n                \"currency\": \"INR\",\n                \"reference\": \"CERT-505\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"ANSWERED\",\n                \"answer\": \"Supported by the eligible policy evidence: The annual certification reimbursement limit for employees is INR 25000.\",\n                \"citations\": [\n                    {\n                        \"chunk_id\": \"atlas-cert-current\",\n                        \"quote\": \"The annual certification reimbursement limit for employees is INR 25000.\"\n                    }\n                ]\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"HUMAN_REVIEW_REQUIRED\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-06\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": null,\n            \"field_evidence\": {},\n            \"policy\": null,\n            \"review_required\": true,\n            \"issues\": [\n                \"EXACT_DUPLICATE_FILE\"\n            ],\n            \"duplicate_of\": \"request-01\",\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-07\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"external training\",\n                \"amount\": null,\n                \"currency\": null,\n                \"reference\": \"TRAIN-707\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"INSUFFICIENT_EVIDENCE\",\n                \"answer\": null,\n                \"citations\": []\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"AMOUNT_MISSING_OR_AMBIGUOUS\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-08\",\n            \"processing_status\": \"FAILED\",\n            \"extracted\": null,\n            \"field_evidence\": {},\n            \"policy\": null,\n            \"review_required\": true,\n            \"issues\": [\n                \"TECHNICAL_FAILURE\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": {\n                \"code\": \"EMPTY_FILE\",\n                \"message\": \"The item could not be processed safely.\"\n            }\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Spring boot - Batch API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Caller-Id",
+            "value": "atlas-employee-01"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "type": "text",
+              "contentType": "application/json",
+              "key": "metadata",
+              "value": "{\"batch_id\":\"batch-001\",\"as_of\":\"2026-09-21\",\"documents\":[{\"document_id\":\"request-01\",\"filename\":\"request-01.txt\"},{\"document_id\":\"request-02\",\"filename\":\"request-02.pdf\"},{\"document_id\":\"request-03\",\"filename\":\"request-03.txt\"},{\"document_id\":\"request-04\",\"filename\":\"request-04.txt\"},{\"document_id\":\"request-05\",\"filename\":\"request-05.txt\"},{\"document_id\":\"request-06\",\"filename\":\"request-06.txt\"},{\"document_id\":\"request-07\",\"filename\":\"request-07.txt\"},{\"document_id\":\"request-08\",\"filename\":\"request-08.txt\"}]}"
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "src": [
+                "C:\\Users\\acer\\Desktop\\marlabs-assessment\\examples\\requests\\request-01.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-01.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-02.pdf",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-03.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-04.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-05.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-06.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-07.txt",
+                "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-08.txt"
+              ]
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "src": "C:\\Users\\acer\\Desktop\\marlabs-assessment\\examples\\requests\\request-02.pdf",
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "src": "C:\\Users\\acer\\Desktop\\marlabs-assessment\\examples\\requests\\request-03.txt",
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "src": "C:\\Users\\acer\\Desktop\\marlabs-assessment\\examples\\requests\\request-04.txt",
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "src": "C:\\Users\\acer\\Desktop\\marlabs-assessment\\examples\\requests\\request-05.txt",
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "src": "C:\\Users\\acer\\Desktop\\marlabs-assessment\\examples\\requests\\request-06.txt",
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "src": "C:\\Users\\acer\\Desktop\\marlabs-assessment\\examples\\requests\\request-07.txt",
+              "disabled": true
+            },
+            {
+              "type": "file",
+              "key": "files",
+              "src": "C:\\Users\\acer\\Desktop\\marlabs-assessment\\examples\\requests\\request-08.txt",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/batches",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "batches"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Caller-Id",
+                "value": "atlas-employee-01"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "contentType": "application/json",
+                  "key": "metadata",
+                  "value": "{\"batch_id\":\"batch-001\",\"as_of\":\"2026-09-21\",\"documents\":[{\"document_id\":\"request-01\",\"filename\":\"request-01.txt\"},{\"document_id\":\"request-02\",\"filename\":\"request-02.pdf\"},{\"document_id\":\"request-03\",\"filename\":\"request-03.txt\"},{\"document_id\":\"request-04\",\"filename\":\"request-04.txt\"},{\"document_id\":\"request-05\",\"filename\":\"request-05.txt\"},{\"document_id\":\"request-06\",\"filename\":\"request-06.txt\"},{\"document_id\":\"request-07\",\"filename\":\"request-07.txt\"},{\"document_id\":\"request-08\",\"filename\":\"request-08.txt\"}]}"
+                },
+                {
+                  "type": "file",
+                  "key": "files",
+                  "src": [
+                    "C:\\Users\\acer\\Desktop\\marlabs-assessment\\examples\\requests\\request-01.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-01.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-02.pdf",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-03.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-04.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-05.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-06.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-07.txt",
+                    "/C:/Users/acer/Desktop/marlabs-assessment/examples/requests/request-08.txt"
+                  ]
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8080/batches",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "batches"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "3716"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 06 Oct 2026 11:18:58 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"batch_id\": \"batch-001\",\n    \"summary\": {\n        \"total\": 8,\n        \"completed\": 7,\n        \"failed\": 1\n    },\n    \"results\": [\n        {\n            \"document_id\": \"request-01\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"certification reimbursement\",\n                \"amount\": 18000,\n                \"currency\": \"INR\",\n                \"reference\": \"CERT-101\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"ANSWERED\",\n                \"answer\": \"Supported by the eligible policy evidence: The annual certification reimbursement limit for employees is INR 25000.\",\n                \"citations\": [\n                    {\n                        \"chunk_id\": \"atlas-cert-current\",\n                        \"quote\": \"The annual certification reimbursement limit for employees is INR 25000.\"\n                    }\n                ]\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"HUMAN_REVIEW_REQUIRED\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-02\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"home-office allowance\",\n                \"amount\": 14000,\n                \"currency\": \"INR\",\n                \"reference\": \"HOME-202\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"CONFLICT\",\n                \"answer\": null,\n                \"citations\": [\n                    {\n                        \"chunk_id\": \"atlas-home-office-b\",\n                        \"quote\": \"The annual home-office allowance for employees is INR 15000.\"\n                    },\n                    {\n                        \"chunk_id\": \"atlas-home-office-a\",\n                        \"quote\": \"The annual home-office allowance for employees is INR 12000.\"\n                    }\n                ]\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"POLICY_CONFLICT\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-03\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"certification reimbursement\",\n                \"amount\": null,\n                \"currency\": \"INR\",\n                \"reference\": \"CERT-303\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"ANSWERED\",\n                \"answer\": \"Supported by the eligible policy evidence: The annual certification reimbursement limit for employees is INR 25000.\",\n                \"citations\": [\n                    {\n                        \"chunk_id\": \"atlas-cert-current\",\n                        \"quote\": \"The annual certification reimbursement limit for employees is INR 25000.\"\n                    }\n                ]\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"AMOUNT_MISSING_OR_AMBIGUOUS\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-04\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"wellness benefit\",\n                \"amount\": 6000,\n                \"currency\": \"INR\",\n                \"reference\": \"WELL-404\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"INSUFFICIENT_EVIDENCE\",\n                \"answer\": null,\n                \"citations\": []\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"HUMAN_REVIEW_REQUIRED\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-05\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"certification reimbursement\",\n                \"amount\": 70000,\n                \"currency\": \"INR\",\n                \"reference\": \"CERT-505\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"ANSWERED\",\n                \"answer\": \"Supported by the eligible policy evidence: The annual certification reimbursement limit for employees is INR 25000.\",\n                \"citations\": [\n                    {\n                        \"chunk_id\": \"atlas-cert-current\",\n                        \"quote\": \"The annual certification reimbursement limit for employees is INR 25000.\"\n                    }\n                ]\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"HUMAN_REVIEW_REQUIRED\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-06\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": null,\n            \"field_evidence\": {},\n            \"policy\": null,\n            \"review_required\": true,\n            \"issues\": [\n                \"EXACT_DUPLICATE_FILE\"\n            ],\n            \"duplicate_of\": \"request-01\",\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-07\",\n            \"processing_status\": \"COMPLETED\",\n            \"extracted\": {\n                \"benefit\": \"external training\",\n                \"amount\": null,\n                \"currency\": null,\n                \"reference\": \"TRAIN-707\"\n            },\n            \"field_evidence\": {},\n            \"policy\": {\n                \"status\": \"ANSWERED\",\n                \"answer\": \"Supported by the eligible policy evidence: Manager approval is required before external training is booked.\",\n                \"citations\": [\n                    {\n                        \"chunk_id\": \"atlas-training-current\",\n                        \"quote\": \"Manager approval is required before external training is booked.\"\n                    }\n                ]\n            },\n            \"review_required\": true,\n            \"issues\": [\n                \"AMOUNT_MISSING_OR_AMBIGUOUS\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": null\n        },\n        {\n            \"document_id\": \"request-08\",\n            \"processing_status\": \"FAILED\",\n            \"extracted\": null,\n            \"field_evidence\": {},\n            \"policy\": null,\n            \"review_required\": true,\n            \"issues\": [\n                \"TECHNICAL_FAILURE\"\n            ],\n            \"duplicate_of\": null,\n            \"error\": {\n                \"code\": \"EMPTY_FILE\",\n                \"message\": \"The item could not be processed safely.\"\n            }\n        }\n    ]\n}"
+        }
+      ]
+    }
+  ]
+}
